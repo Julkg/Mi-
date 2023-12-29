@@ -1,0 +1,276 @@
+*{
+    margin: 0px;/* agregamos un margen y padding general, estos los iremos modificando a conveniencia.*/
+    padding :0px;
+    box-sizing: border-box; /* un box sizing para que no se nos desborden nuestros padre y llevar un mejor control y gestion*/
+}
+body{
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Source Code Pro', monospace;
+}
+/*es importante las etiquetas porque observamos que si tienen sentido en el html, el header es mas grande que el nav pero mas pequeño que el section*/
+
+a{
+    text-decoration: none; /*aqui podemos trabajar con todas las anclas*/
+}
+.padre{
+    display: flex; /*al colocar flex se vuelven columnas, pero no queremos que sean colomunas, pero si queremos que se comporten como flex*/
+    flex-flow: column nowrap ;/* entonces seleccionamos esta comando y nowrap es para que el tamaño de la celda se ajuste al tamaño de su contenido*/
+}
+.margin-interno{
+    padding: 0 50px;
+}
+    .header{
+    background: url(../naruto-2020-art.jpg);/* para retroceder en un directorio dos puntos barra*/
+    background-position: center;
+    background-attachment: contain;
+    background-size: cover; /* baclgroun cover para que cubra la totalidad del header*/
+    display: flex;
+    flex-flow: column nowrap;
+    }
+        .menu{
+        background-color:rgba(0,0,0,0.4);
+        display: flex;
+        flex-flow: row nowrap;
+        height: 60px;
+        align-items: center;
+        padding: 1px;
+        justify-content: space-around;
+        border-bottom: 1px solid rgba(255,255,255,0.5);
+        }
+            .logo{
+            flex: 1 1 auto;
+            color: black;
+            font-size: 20px;
+            margin: 10px;
+            }
+                .logo a{   /* para llamar un hijo que no tiene clase, primero llamamos el padre .logo en este caso espacio y luego el hijo de dicho padre*/
+            color: aqua; 
+                }
+                .logo a:hover{
+                color:#a17b99;
+                }
+            .nav-boton{
+                background: #ff00b71c;
+                color: hsl(197, 68%, 76%);
+                padding: 5px 70px;
+                justify-self: center;
+                font-size: 20px;
+                font-weight: 500;
+                flex-direction: column;
+                backdrop-filter: blur(0.4rem);
+                border-radius: 10%;
+                border-color: #f0ffff00; 
+                display: none;
+            }
+            .nav-boton:hover{
+                background: #ff00b71c;
+            }        
+            .nav{
+            flex: 1 4 auto;
+            display: flex;
+            }
+            .nav a{
+                color: #fff;
+                font-size: 15px;
+                text-transform: uppercase;/*text-transform es para para controlar la capitalizacion de los textos*/
+                padding: 0 5px;
+                letter-spacing: 2px; /*letter-spacing: se utiliza para definir el espacio entre letras*/
+            }
+            .nav a:hover{
+                color:#a17b99;
+            } 
+
+
+            .social{
+            flex: 1 1 auto;
+            display: flex;
+            justify-content: center;
+            }
+                .social a{
+                    font-size: 18px;
+                    color: #fff;
+                    padding: 0 5px;
+                }
+                .social a:hover{
+                    color:#a17b99;
+                }
+        .texto-principal{
+        /*background: #E36414;*/
+        height: 580px;
+        display: flex;
+        align-items: center;
+        flex-flow: row wrap;
+        flex: 1 1 100%;
+        }
+            h1{
+                font-family: 'Inconsolata', monospace;
+                font-family: 'Roboto', sans-serif;
+                font-family: 'Source Code Pro', monospace;
+                font-size: 21px;
+                color: #fff;
+                font-weight: 200; /*el ancho de las letras, como decir negrita, recuerda que es solo visual, si quieres que algo se destaque usa la etiquetra en html <b/>*/
+                text-align: center;
+                line-height: 1.6; /*el line-hight: se utiliza para definir el espaciado de las lineas del parrafo*/
+                padding:10%;
+            }
+
+    .section{
+    background: #f7f7f7;
+    display: flex;
+    }
+        .articulos{
+        background: #f7f7f7;
+        flex: 1 1 auto;
+        display: flex;
+        flex-flow: row wrap; /*recuerda que el wrap es para que si el contenedor no tiene espacio horizontal suficiente, pasa abajo*/
+        }
+            .article{
+            flex: 1 1 40%;
+            color:#444 ;
+            font-size: 13px;
+            letter-spacing: 1;
+            margin: 10px 10px 0 0px;
+            flex: 1 1 45%;
+            background: #f5959585;
+            border-radius: 1%;
+            }
+                h3{
+                    color: #fff;
+                    font-size: 13px;
+                    padding: 10px 0;
+                    margin-top: -80px;
+                }
+                h2{
+                    font-size: 25px;
+                    text-transform: uppercase;
+                    padding: 0px 0 10px 0;
+                    color: #fff;
+                }
+                .article img{
+                    width: 100%;  
+                }
+                .article a{
+                    color: #f7f7f7;
+                    font-size: 13px;
+                    padding: 10px;
+                    background: black;
+                    margin: 10px 0;
+                    display: inline-block;
+                }
+                .article a:hover{
+                    background: rgba(60, 60, 224, 0.603);
+                }
+            .navegacion{
+            background: #000;
+            flex: 1 1 100%;
+            margin: 10px 10px 0 0px; /*al colocar en el tercero 100% ocuparia el 100 del ancho y como anteriormente pusimos wrap. baja automaticamente*/
+            .navi{
+                color: #fff;
+                font-size: 15px;
+                text-transform: uppercase;
+                padding: 0 10px;
+                letter-spacing: 2px;
+            }
+            .navi:hover{
+                color: #444;
+            }
+        }
+        .aside{
+        /*background: #820300;*/
+        display: flexbox;
+        flex: 1 1 auto;
+        margin: 10px 5px 10px 0;
+        }
+            /* .publicidad{
+                background: #EAECCC
+            } */
+            .aside img{
+                width: 300px;  
+            }
+            h4{
+                color: #fff;
+                background: black;
+                padding: 10px;
+                text-transform: uppercase;
+            }
+    .footer{
+        background: #000;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+        .pie{
+            /* background: #65B741; */
+            text-align: center;
+        }
+        .pie a{
+            color: #fff;
+            font-size: 11px;
+            text-transform: uppercase;
+            padding: 0 10px;
+            letter-spacing: 2px;
+        }
+@media all and (max-width:920px){
+    h1{
+        font-size: 15px;
+    }
+}
+
+.scale-up-top{animation:scale-up-top 0.4s; } @keyframes scale-up-top{0%{transform:scale(.5);transform-origin:center top}100%{transform:scale(1);transform-origin:center top}}
+
+@media all and (max-width:830px){
+    .section{
+        flex-flow: column nowrap;
+    }
+    .menu{
+        flex-direction: column;
+        height: auto;
+    }
+    .aside{
+        display: flex;
+        justify-content: center;
+    }
+    .aside img{
+        max-width: 100%;  
+    }
+}
+@media all and (max-width:630px){
+    .articulo{
+        flex-direction: column;
+        transition: 500ms;
+    }
+    .nav{
+        flex-direction: column;
+        transition: 500ms;
+    }
+    .div2{
+        background: #ff00b71c;
+        display: flex;
+        flex-direction: column;
+        backdrop-filter: blur(0.4rem);
+        border: solid;
+        border-color: #f0ffff00;
+        
+    }
+    .nav-enlace{
+        margin: 10px 10px;
+        transition: 500ms;
+    }
+    .nav-boton{
+        display: block;
+        width: 200px;
+        transition: 500ms;
+        display: flex;
+    }
+    .desaparece{
+        display: none;
+        transition: 500ms;
+    }
+     
+}
+@media all and (max-width:400px){
+    .aside{
+        flex-direction: column;
+    }
+}

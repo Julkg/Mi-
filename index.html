@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Practica (2)</title>
+    <script src="https://kit.fontawesome.com/6f3f19f0ec.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Roboto:wght@100&family=Source+Code+Pro:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <!-- Cuando hacemos una etiqueta y queremos que dicha etiqueta tenga una clase, podemos simplemente escribir la etiqueta por ejemplo "div" seguida de un punto y escribir la clase por ejemplo "padre" asi div.padre, le damos enter y estara creada la clase -->
+    <div class="padre">
+        <header class="header">
+            <div class="menu margin-interno">
+                <div class="logo">
+                    <a href="index.html">LogoCorporativo</a>
+                </div>
+                <nav class="nav">
+                    <button class="nav-boton scale-up-top" onclick="accion()"><a href="#"><b>Menu</b></a></button>
+                    <div class="div2 desaparece scale-up-top">
+                    <a href="#"><i class="fa-solid fa-house nav-enlace"></i>Inicio</a>
+                    <a href="#"><i class="fa-regular fa-user nav-enlace scale-up-top"></i>Nosotros</a>
+                    <a href="#"><i class="fa-solid fa-comment nav-enlace scale-up-top"></i>Servicios</a>
+                    <a href="#"><i class="fa-regular fa-newspaper nav-enlace scale-up-top"></i>Noticias</a>
+                    <a href="#"><i class="fa-solid fa-envelope nav-enlace scale-up-top"></i>Contacto</a>
+                    </div>
+                </nav>
+                <div class="social">
+                    <div><a href="#"><i class="fa-brands fa-facebook"></i></a></div>
+                    <div><a href="#"><i class="fa-brands fa-x-twitter"></i></a></div>
+                    <div><a href="#"><i class="fa-brands fa-square-instagram"></i></a></div>
+                </div>
+            </div>
+            <div class="texto-principal margin-interno">
+                <h1><b>Es un ninja prodigioso</b> que se graduó de la academia ninja a la corta edad de 7 años, convirtiéndose en Chūnin a los 10 años y siendo capitán de un escuadrón ANBU a los 13 años. Es un gran conocedor de todas las técnicas del Clan Uchiha, sobre todo de las capacidades del Sharingan. Podía utilizar ninjutsu de gran nivel, como la Gran Explosión del Clon. En las técnicas de Itachi, era común la presencia de cuervos, tanto en el ninjutsu como en el genjutsu. Además, es un personaje misterioso y complejo, cuya verdadera naturaleza y motivaciones son reveladas gradualmente a lo largo de esta historia.</h1>
+            </div>
+        </header>
+        <section class="section margin-interno">
+            <div class="articulos">
+                <article class="article">
+                    <img src="../naruto.jpg" alt="">
+                    <h3>27 de diciembre 2023</h3>
+                    <h2>NARUTO</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam nesciunt saepe maxime nulla sed quo voluptate eos facilis, sapiente laborum? Vero vel ea voluptatibus, unde repellat saepe magni doloribus molestias.</p>
+                    <a href="#">Leer mas...</a>
+                </article>
+                <article class="article">
+                    <img src="../minato.gif" alt="">
+                    <h3>4 Hokage</h3>
+                    <h2>PAPA DE NARUTO</h2>
+                    <p>Minato Namikaze (波風ミナト) es un personaje de la serie de anime y manga Naruto. Fue el Cuarto Hokage de la Aldea Oculta de la Hoja y el padre de Naruto Uzumaki. Minato era un ninja muy talentoso y considerado un genio que aparece solo una vez por generación. También fue el primer Jinchūriki de la mitad Yin de Kurama</p>
+                    <a href="#">Leer mas...</a>
+                </article>
+                <article class="article">
+                    <img src="../sasuke.jpg" alt="">
+                    <h3>27 de diciembre 2023</h3>
+                    <h2>NOVIO DE NARUTO</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam nesciunt saepe maxime nulla sed quo voluptate eos facilis, sapiente laborum? Vero vel ea voluptatibus, unde repellat saepe magni doloribus molestias.</p>
+                    <a href="#">Leer mas...</a>
+                </article>
+                <article class="article">
+                    <img src="../kakashi.jpg" alt="">
+                    <h3>27 de diciembre 2023</h3>
+                    <h2>ENTRENADOR DE NARUTO</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam nesciunt saepe maxime nulla sed quo voluptate eos facilis, sapiente laborum? Vero vel ea voluptatibus, unde repellat saepe magni doloribus molestias.</p>
+                    <a href="#">Leer mas...</a>
+                </article>
+                <nav class="navegacion">
+                    <a class="navi" href="#">INICIO</a>
+                    <a class="navi" href="#">1</a>
+                    <a class="navi" href="#">2</a>
+                    <a class="navi" href="#">3</a>
+                    <a class="navi" href="#">4</a>
+                    <a class="navi" href="#">3</a>
+                    <a class="navi" href="#">...</a>
+                    <a class="navi" href="#">Final</a>   
+                </nav>
+            </div>
+            <aside class="aside">
+                <div class="publicidad">
+                    <H4>Publicidad</H4>
+                    <img src="../crunchi.webp" alt="">
+                </div>
+                <div class="publicidad">
+                    <H4>Publicidad</H4>
+                    <img src="../crunchi.webp" alt="">
+                </div>
+                <div class="publicidad">
+                    <H4>Publicidad</H4>
+                    <img src="../crunchi.webp" alt="">
+            </aside>
+        </section>
+        <footer class="footer margin-interno">
+            <nav class="pie">
+                <a href="#">Desarrollado por Julian Figueroa</a>
+            </nav>
+        </footer>
+    
+    </div>
+    <script>
+        function accion(){
+            console.log('esta funcionando');
+            var ancla = document.getElementsByClassName('div2');
+            for(var i = 0; i < ancla.length; i++){
+                ancla[i].classList.toggle('desaparece');
+            }
+        }
+    </script>
+     
+</body>
+</html>
